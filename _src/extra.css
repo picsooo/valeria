@@ -1,0 +1,213 @@
+/* ===== Site complet Maison Valeria : composants multi-pages ===== */
+body{padding-bottom:0}
+.fab{bottom:16px}
+.mv-credit{margin-left:auto;opacity:.85}
+.mv-credit a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.ftr .copy a{color:inherit}
+
+/* Navigation : menu déroulant Prestations */
+.nav{align-items:center}
+.nav .dd{position:relative}
+.nav .dd>a{display:inline-flex;align-items:center;gap:6px}
+.nav .dd>a::before{content:"";order:2;width:5px;height:5px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg) translateY(-2px)}
+.nav .ddm{position:absolute;top:calc(100% + 14px);left:50%;transform:translate(-50%,8px);min-width:270px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:10px;box-shadow:0 30px 60px -30px rgba(60,40,20,.45);opacity:0;pointer-events:none;transition:opacity .3s,transform .3s var(--ease);display:grid;gap:2px;text-transform:none;letter-spacing:0}
+.nav .ddm::before{content:"";position:absolute;left:0;right:0;top:-16px;height:16px}
+.nav .dd:hover .ddm,.nav .dd:focus-within .ddm{opacity:1;pointer-events:auto;transform:translate(-50%,0)}
+.nav .ddm a{display:flex;align-items:center;gap:12px;padding:9px 12px;border-radius:14px;font-size:14.5px;color:var(--ink)!important;transition:background .25s}
+.nav .ddm a::after{display:none}
+.nav .ddm a:hover{background:var(--cream)}
+.nav .ddm img{width:40px;height:40px;border-radius:12px;object-fit:cover;flex:0 0 40px}
+.nav .ddm small{display:block;font-size:11.5px;color:var(--muted);line-height:1.3}
+.nav a.cur::after{transform:scaleX(1)}
+.mnav{overflow-y:auto;justify-content:flex-start;padding-top:80px}
+.mnav a{font-size:30px}
+.mnav .sub{display:grid;gap:4px;padding:2px 0 12px 16px;border-left:1px solid rgba(216,184,135,.3);margin:0 0 8px 4px}
+.mnav .sub a{font-family:var(--sans);font-size:16px;color:rgba(246,240,231,.75);line-height:1.6}
+.mnav .mcta{margin-top:18px;align-self:flex-start;font-family:var(--sans);font-size:13px}
+
+/* Héros des pages intérieures */
+.ph{position:relative;min-height:min(78vh,640px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#1e140d}
+.ph img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.06);animation:phz 14s ease-out forwards}
+@keyframes phz{to{transform:scale(1)}}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,12,8,.78) 0,rgba(18,12,8,.42) 55%,rgba(18,12,8,.12) 100%),linear-gradient(0deg,rgba(18,12,8,.6) 0,rgba(18,12,8,0) 45%)}
+.ph .wrap{position:relative;z-index:2;padding:150px 0 64px}
+.ph .crumb{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:22px;display:flex;gap:10px;flex-wrap:wrap}
+.ph .crumb a:hover{color:#ebd3ae}
+.ph .crumb span::before{content:"/";margin-right:10px;opacity:.5}
+.ph .eyebrow{color:#ebd3ae}
+.ph h1{color:#fff;font-size:clamp(46px,7.6vw,96px);font-weight:400;letter-spacing:-.02em;line-height:.98;margin-top:16px;max-width:14ch}
+.ph h1 em{color:#ebd3ae}
+.ph p{color:rgba(255,255,255,.82);font-size:17.5px;max-width:52ch;margin-top:20px}
+.ph .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.ph .bw{background:#fff;color:var(--espresso)}
+.ph .bg2{border:1px solid rgba(255,255,255,.55);color:#fff}
+.ph .bg2:hover{background:rgba(255,255,255,.12)}
+.ph.short{min-height:min(60vh,500px)}
+
+/* Sections génériques */
+.sec{padding:110px 0}
+.sec.alt{background:#fff}
+.sec.cream{background:var(--cream)}
+.sec-head{display:grid;gap:18px;margin-bottom:50px}
+@media(min-width:900px){.sec-head{grid-template-columns:1.1fr 1fr;align-items:end}}
+.sec-head .lead{margin:0}
+
+.split{display:grid;gap:44px;align-items:center}
+@media(min-width:900px){.split{grid-template-columns:1fr 1fr;gap:70px}.split.rev>:first-child{order:2}}
+.split .pic{border-radius:30px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px -40px rgba(60,40,20,.55)}
+.split .pic img{width:100%;height:100%;object-fit:cover}
+.split .pic.land{aspect-ratio:4/3}
+.split p{color:var(--muted);margin-top:16px}
+.split p.lead{font-size:18px}
+.ticks{list-style:none;display:grid;gap:12px;margin-top:26px}
+.ticks li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px}
+.ticks li::before{content:"";flex:0 0 20px;height:20px;border-radius:50%;margin-top:3px;background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4L18 8'/%3E%3C/svg%3E") center/14px no-repeat}
+
+/* Cartes de prestations */
+.svl{display:grid;gap:16px}
+@media(min-width:700px){.svl{grid-template-columns:1fr 1fr}}
+@media(min-width:1100px){.svl.c3{grid-template-columns:repeat(3,1fr)}}
+.sv{background:#fff;border:1px solid var(--line);border-radius:26px;padding:28px 26px 24px;display:flex;flex-direction:column;gap:10px;transition:transform .5s var(--ease),box-shadow .5s;position:relative}
+.sec.alt .sv{background:var(--ivory)}
+.sv:hover{transform:translateY(-4px);box-shadow:0 30px 60px -40px rgba(60,40,20,.55)}
+.sv .n{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:19px}
+.sv h3{font-size:28px;font-weight:500}
+.sv p{color:var(--muted);font-size:15px;flex:1}
+.sv .foot{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:14px;margin-top:6px}
+.sv .tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.sv .tag.free{background:var(--gold);color:#fff;padding:4px 10px;border-radius:999px}
+.sv .bk-l{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-d);font-weight:500;display:inline-flex;align-items:center;gap:10px}
+.sv .bk-l:hover{color:var(--espresso)}
+
+/* Déroulé en étapes */
+.flow{display:grid;gap:14px;counter-reset:f}
+@media(min-width:900px){.flow{grid-template-columns:repeat(4,1fr)}.flow.f3{grid-template-columns:repeat(3,1fr)}}
+.flow li{list-style:none;counter-increment:f;padding:26px 22px;border-radius:24px;background:#fff;border:1px solid var(--line)}
+.sec.alt .flow li{background:var(--ivory)}
+.flow li::before{content:"0" counter(f);font-family:var(--serif);font-style:italic;font-size:34px;color:var(--gold);display:block;line-height:1;margin-bottom:14px}
+.flow b{font-family:var(--serif);font-weight:500;font-size:24px;color:var(--espresso);display:block;line-height:1.1;margin-bottom:8px}
+.flow span{font-size:14.5px;color:var(--muted)}
+
+/* Bandeau diagnostic offert */
+.dgb{position:relative;border-radius:34px;overflow:hidden;background:var(--espresso);color:var(--ivory);display:grid}
+@media(min-width:900px){.dgb{grid-template-columns:1.1fr .9fr}}
+.dgb .t{padding:48px 40px;position:relative;z-index:1}
+.dgb h2{color:var(--ivory);font-size:clamp(34px,4.6vw,54px)}
+.dgb h2 em{color:var(--gold-l)}
+.dgb p{color:rgba(246,240,231,.72);margin:16px 0 26px;max-width:46ch}
+.dgb .eyebrow{color:var(--gold-l)}
+.dgb .im{min-height:280px;position:relative}
+.dgb .im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.dgb .zero{font-family:var(--serif);font-size:64px;color:var(--gold-l);line-height:1;display:block;margin-top:18px}
+
+/* FAQ */
+.faq{display:grid;gap:10px;max-width:880px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:20px;padding:0 24px;transition:box-shadow .3s}
+.sec.alt .faq details{background:var(--ivory)}
+.faq details[open]{box-shadow:0 20px 40px -30px rgba(60,40,20,.5)}
+.faq summary{cursor:pointer;list-style:none;padding:20px 0;font-family:var(--serif);font-size:22px;font-weight:500;color:var(--espresso);display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--sans);font-weight:300;font-size:26px;color:var(--gold);transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--muted);font-size:15.5px}
+
+/* Autres univers */
+.xl{display:grid;gap:14px;grid-template-columns:repeat(2,1fr)}
+@media(min-width:900px){.xl{grid-template-columns:repeat(4,1fr)}}
+.xl a{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:3/4;display:block;color:#fff}
+.xl img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.xl a:hover img{transform:scale(1.07)}
+.xl a::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(18,12,8,.72),rgba(18,12,8,0) 55%)}
+.xl span{position:absolute;left:18px;right:18px;bottom:16px;z-index:1;font-family:var(--serif);font-size:24px;line-height:1.1}
+.xl small{display:block;font-family:var(--sans);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:#ebd3ae;margin-bottom:6px}
+
+/* Bandeau d'appel final */
+.ctab{padding:100px 0;text-align:center;background:var(--blush,#F1E4DA)}
+.ctab h2{max-width:16ch;margin:14px auto 0}
+.ctab p{color:var(--muted);max-width:48ch;margin:18px auto 30px}
+.ctab .acts{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-dark{background:var(--espresso);color:#fff}
+.btn-dark:hover{transform:translateY(-2px)}
+
+/* Lien « découvrir » sur les cartes de l'accueil */
+.uc-more{display:inline-flex;align-items:center;gap:10px;margin-top:16px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--gold-d)}
+.uc-more:hover{color:var(--espresso)}
+.uc h3 a:hover{color:var(--gold-d)}
+.more-l{display:inline-flex;align-items:center;gap:10px;margin-top:22px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--gold-d)}
+
+/* Visuel X5 Pro */
+.mvx{margin-top:46px}
+.mvx-card{border-radius:30px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(60,40,20,.55);border:1px solid rgba(176,141,87,.25);background:#fff}
+.mvx-card img{display:block;width:100%;height:auto}
+.mvx-cap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;align-items:center;margin-top:16px;font-size:14px;color:#8A7A6D}
+.mvx-cap b{font-family:var(--serif);font-weight:500;font-size:22px;color:#221912}
+
+/* Kérastase : rituels détaillés */
+.rits{display:grid;gap:14px}
+@media(min-width:700px){.rits{grid-template-columns:1fr 1fr}}
+@media(min-width:1100px){.rits{grid-template-columns:repeat(3,1fr)}}
+.rt{background:#fff;border:1px solid var(--line);border-radius:26px;padding:26px;display:grid;gap:8px}
+.rt i{width:46px;height:46px;border-radius:14px;display:block;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06);margin-bottom:8px}
+.rt h3{font-size:28px}
+.rt small{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-d)}
+.rt p{color:var(--muted);font-size:15px}
+
+/* Tarifs */
+.tnote{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px 24px;margin-bottom:40px}
+.tnote b{font-family:var(--serif);font-size:22px;font-weight:500;color:var(--espresso);display:block}
+.tnote span{color:var(--muted);font-size:15px}
+.tnote::before{content:"";flex:0 0 12px;height:12px;border-radius:50%;background:var(--gold);margin-top:9px;box-shadow:0 0 0 6px rgba(176,141,87,.18)}
+.tgrid{display:grid;gap:18px}
+@media(min-width:900px){.tgrid{grid-template-columns:1fr 1fr}}
+.tcard{background:#fff;border:1px solid var(--line);border-radius:28px;padding:28px 28px 16px}
+.tcard header{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:10px}
+.tcard h3{font-size:30px}
+.tcard header a{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-d);white-space:nowrap}
+.tcard ul{list-style:none}
+.tcard li{display:flex;align-items:baseline;gap:10px;padding:13px 0;border-top:1px solid var(--line);font-size:15.5px}
+.tcard li .ln{flex:1;border-bottom:1px dotted rgba(42,32,25,.22);transform:translateY(-4px)}
+.tcard li .pr{font-family:var(--serif);font-size:19px;color:var(--gold-d);white-space:nowrap}
+.tcard li .pr.free{font-family:var(--sans);font-size:11px;letter-spacing:.14em;text-transform:uppercase;background:var(--gold);color:#fff;padding:4px 10px;border-radius:999px}
+.tcard li .pr.soon{font-family:var(--sans);font-size:12px;color:var(--muted);font-style:italic}
+
+/* L'institut : galerie */
+.igal{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+@media(min-width:900px){.igal{grid-template-columns:repeat(4,1fr);grid-auto-rows:220px}.igal .w2{grid-column:span 2}.igal .h2{grid-row:span 2}}
+.igal figure{margin:0;border-radius:24px;overflow:hidden;position:relative;min-height:200px}
+.igal img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.igal figure:hover img{transform:scale(1.05)}
+.igal figcaption{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.9);border-radius:999px;padding:6px 12px;font-size:12px;color:var(--espresso)}
+.vals{display:grid;gap:14px}
+@media(min-width:900px){.vals{grid-template-columns:repeat(3,1fr)}}
+.vals div{padding:30px 26px;border-radius:26px;background:#fff;border:1px solid var(--line)}
+.vals b{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--gold)}
+.vals h3{font-size:28px;margin:8px 0}
+.vals p{color:var(--muted);font-size:15px}
+
+/* Contact */
+.cgrid{display:grid;gap:14px}
+@media(min-width:700px){.cgrid{grid-template-columns:1fr 1fr}}
+@media(min-width:1100px){.cgrid{grid-template-columns:repeat(4,1fr)}}
+.cc{background:#fff;border:1px solid var(--line);border-radius:26px;padding:26px;display:grid;gap:8px;align-content:start}
+.cc svg{width:30px;height:30px;color:var(--gold)}
+.cc h3{font-size:26px;margin-top:6px}
+.cc p{color:var(--muted);font-size:15px}
+.cc a.v{font-family:var(--serif);font-size:22px;color:var(--espresso)}
+.cc .soon{font-size:12.5px;color:var(--gold-d);font-style:italic}
+.mapph{margin-top:18px;border-radius:30px;overflow:hidden;position:relative;min-height:340px;display:grid;place-items:center;text-align:center;color:#fff}
+.mapph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mapph::after{content:"";position:absolute;inset:0;background:rgba(18,12,8,.55)}
+.mapph div{position:relative;z-index:1;padding:30px}
+.mapph h3{color:#fff;font-size:clamp(30px,4vw,44px)}
+.mapph p{color:rgba(255,255,255,.8);margin-top:10px}
+
+/* Réservation : envoi WhatsApp */
+.bk-wa{display:inline-flex;align-items:center;gap:10px;margin-top:18px;background:#1f7a4d;color:#fff;padding:14px 22px;border-radius:999px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+.bk-wa svg{width:18px;height:18px;fill:currentColor}
+
+@media(max-width:640px){
+ .sec{padding:76px 0}
+ .ph .wrap{padding:130px 0 48px}
+ .dgb .t{padding:36px 26px}
+ .ctab{padding:76px 0}
+}
