@@ -28,4 +28,43 @@
  }
  function tryMount(){if(mount())return;var n=0,iv=setInterval(function(){if(mount()||++n>80)clearInterval(iv)},100)}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',tryMount);else tryMount();
-})();</script></body></html>
+})();</script><style id="mv-final">
+html>div{display:none!important}
+body{visibility:visible!important}
+.demo{display:none!important}
+.vsw{bottom:16px!important}
+.fab{bottom:16px!important}
+body{padding-bottom:0!important}
+.mv-credit{margin-left:auto;opacity:.85}
+.mv-credit a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.mvx{margin-top:46px}
+#diagnostic .mvx{display:block!important;position:relative}
+.mvx-card{border-radius:30px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(60,40,20,.55);border:1px solid rgba(176,141,87,.25);background:#fff}
+.mvx-card img{display:block;width:100%;height:auto}
+.mvx-cap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;align-items:center;margin-top:16px;font-size:14px;color:#8A7A6D}
+.mvx-cap b{font-family:"Cormorant",Georgia,serif;font-weight:500;font-size:22px;color:#221912}
+.diag .mvx-cap{color:rgba(246,240,231,.75)}.diag .mvx-cap b{color:#F6F0E7}
+</style>
+<script>
+(function(){
+ var MAP=[['1654373535457-383a0a4d00f9','img/sourire.webp'],['1489278353717-f64c6ee8a4d2','img/sourire.webp'],
+          ['1632345031435-8727f6897d53','img/ongles.webp'],['1610992015732-2449b76344bc','img/ongles.webp'],['1610992015762-45dca7fa3a85','img/ongles.webp']];
+ function swap(){
+  [].forEach.call(document.querySelectorAll('img'),function(i){var s=i.getAttribute('src')||'';MAP.forEach(function(m){if(s.indexOf(m[0])>-1){i.src=m[1];i.removeAttribute('srcset')}})});
+ }
+ function credit(){
+  var c=document.querySelector('.ftr .copy');
+  if(c&&!c.querySelector('.mv-credit')){var s=document.createElement('span');s.className='mv-credit';s.innerHTML='Site web réalisé par <a href="https://webminds.dz" target="_blank" rel="noopener">Webminds</a>';c.appendChild(s)}
+ }
+ function diag(){
+  var sec=document.querySelector('#diagnostic');if(!sec||sec.querySelector('.mvx'))return;
+  var w=sec.querySelector('.wrap');if(!w)return;
+  var d=document.createElement('div');d.className='wrap mvx';
+  d.innerHTML='<div class="mvx-card"><img src="img/diagnostic-x5.webp" alt="Diagnostic beauté visage et cuir chevelu Maison Valeria, X5 Pro Skin Detector" loading="lazy"></div><div class="mvx-cap"><b>X5 Pro Skin Detector</b><span>Analyse multi-spectrale du visage et du cuir chevelu, votre premier diagnostic est offert.</span></div>';
+  w.parentNode.insertBefore(d,w.nextSibling);
+ }
+ function run(){swap();credit();diag()}
+ run();document.addEventListener('DOMContentLoaded',run);window.addEventListener('load',run);
+})();
+</script>
+</body></html>
