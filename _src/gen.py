@@ -19,7 +19,7 @@ ARR = '<span class="arr"></span>'
 UNI = [
     dict(slug='beaute-du-sourire', p=0, nav='Beauté du sourire', short='Sourire', title='Beauté du sourire',
          h1='Un sourire <em>lumineux.</em>', img='/img/sourire.webp', thumb='/img/sourire.webp',
-         hero='/img/sourire.webp',
+         hero='/img/cabine.webp',
          sub='Blanchiment dentaire esthétique et conseils personnalisés pour un sourire éclatant.',
          lead='Un sourire plus lumineux, avec un suivi pour en préserver l’éclat.',
          intro=('Le sourire est la première chose que l’on remarque. Chez Maison Valeria, le blanchiment dentaire esthétique est pensé comme un véritable soin de beauté : un moment confortable, dans un cadre apaisant, suivi de conseils simples pour faire durer le résultat.',
@@ -32,8 +32,8 @@ UNI = [
               ('Comment réserver ?', 'En ligne, en quelques secondes : choisissez la prestation, le jour et l’heure, l’institut vous recontacte pour confirmer.')],
          desc='Blanchiment dentaire esthétique et conseils personnalisés chez Maison Valeria, institut de beauté à Oran. Réservez en ligne.'),
     dict(slug='coiffure-lissages', p=1, nav='Coiffure & lissages', short='Coiffure', title='Coiffure & beauté capillaire',
-         h1='Coiffure <em>&amp; lissages.</em>', img=U('1580618672591-eb180b1a973f', 1100), thumb=U('1580618672591-eb180b1a973f', 120),
-         hero=U('1580618672591-eb180b1a973f', 1920),
+         h1='Coiffure <em>&amp; lissages.</em>', img='/img/coiffure.webp', thumb='/img/coiffure.webp',
+         hero='/img/coiffure.webp',
          sub='Coiffure, brushing, lissages brésilien, indien, japonais et coréen, soins profonds Kérastase.',
          lead='De la mise en beauté aux lissages, des protocoles pensés pour la nature de chaque chevelure.',
          intro=('Chaque chevelure a son histoire. Avant toute prestation, votre diagnostic capillaire offert permet de comprendre l’état de votre cuir chevelu et de vos longueurs, pour choisir la coupe, le lissage ou le soin vraiment adapté.',
@@ -69,8 +69,8 @@ UNI = [
               ('Comment réserver ?', 'En ligne : choisissez le soin, le jour et l’heure. Vous pouvez ajouter le diagnostic du visage offert en un clic.')],
          desc='Soins du visage personnalisés, masques, soin éclat et hydratation, routines skincare à Oran. Diagnostic du visage offert chez Maison Valeria.'),
     dict(slug='diagnostic-beaute', p=3, nav='Diagnostic beauté offert', short='Diagnostic', title='Diagnostics beauté',
-         h1='Le diagnostic, <em>offert.</em>', img=U('1552693673-1bf958298935', 1100), thumb='/img/diagnostic-x5.webp',
-         hero=U('1552693673-1bf958298935', 1920),
+         h1='Le diagnostic, <em>offert.</em>', img='/img/diagnostic-coin.webp', thumb='/img/diagnostic-coin.webp',
+         hero='/img/diagnostic-coin.webp',
          sub='Diagnostic capillaire par caméra haute définition et diagnostic du visage par appareil spécialisé, offerts à chaque cliente.',
          lead='Des équipements de dernière génération pour comprendre vos besoins avant de choisir un soin.',
          svc=[('Diagnostic capillaire', 'Analyse du cuir chevelu par caméra haute définition, observation de l’état des cheveux, évaluation de vos besoins et recommandation de soins et de produits adaptés.'),
@@ -81,7 +81,7 @@ UNI = [
          desc='Diagnostic capillaire par caméra HD et diagnostic du visage X5 Pro offerts chez Maison Valeria, institut de beauté à Oran.'),
     dict(slug='mains-ongles', p=4, nav='Mains & ongles', short='Ongles', title='Beauté des mains & ongles',
          h1='Jusqu’au bout <em>des ongles.</em>', img='/img/ongles.webp', thumb='/img/ongles.webp',
-         hero='/img/ongles.webp',
+         hero='/img/espace-ongles.webp',
          sub='Manucure, pose d’ongles, nail art et soins esthétiques des mains.',
          lead='Mains soignées et ongles sublimés, jusque dans les finitions.',
          intro=('Des mains soignées disent beaucoup. De la manucure classique au nail art le plus détaillé, chaque prestation est réalisée avec minutie, dans un espace dédié, pour un résultat net et élégant.',
@@ -125,7 +125,7 @@ def footer():
             f'<p style="margin-top:18px;max-width:36ch">Beauté, bien-être et soins personnalisés. Ouverture prochaine à Oran.</p></div>'
             f'<div><h5>Prestations</h5><ul>{pre}</ul></div>'
             f'<div><h5>Maison Valeria</h5><ul><li><a href="/institut">L’institut</a></li><li><a href="/tarifs">Tarifs</a></li><li><a href="/rendez-vous">Prendre rendez-vous</a></li><li><a href="/contact">Contact</a></li></ul></div>'
-            f'<div><h5>Nous trouver</h5><ul><li>Oran, Algérie</li><li style="font-size:12.5px">Adresse, horaires et téléphone communiqués prochainement</li><li style="color:var(--gold-l)">Diagnostics beauté offerts</li></ul></div>'
+            f'<div><h5>Nous trouver</h5><ul><li>Résidence Hasnaoui, îlot 95<br>Oran, Algérie</li><li style="font-size:12.5px">Horaires et téléphone communiqués prochainement</li><li style="color:var(--gold-l)">Diagnostics beauté offerts</li></ul></div>'
             f'<div class="copy"><span>© <span id="yr">2026</span> Maison Valeria</span><span>Institut de beauté · Oran</span>'
             f'<span class="mv-credit">Site web réalisé par <a href="https://webminds.dz" target="_blank" rel="noopener">Webminds</a></span></div>'
             f'</div></footer><a class="btn btn-gold fab" href="/rendez-vous">Réserver</a>')
@@ -218,7 +218,7 @@ def booking_section(head=True):
 def home():
     hx = part('hx').replace('href="#rendez-vous"', 'href="/rendez-vous"').replace('href="#diagnostic" class="btn bg2" data-book="3:0"', 'href="/diagnostic-beaute" class="btn bg2"')
     hx = hx.replace('src="img/', 'src="/img/').replace('<section class="hx" id="top">', '<section class="hx" aria-label="Maison Valeria en images">')
-    hx = hx.replace('<div class="s on"><img src="/img/salon.webp" alt="">', '<div class="s on"><img src="/img/salon.webp" alt="Intérieur de l’institut Maison Valeria à Oran" fetchpriority="high">')
+    hx = hx.replace('<div class="s on"><img src="/img/accueil.webp" alt="">', '<div class="s on"><img src="/img/accueil.webp" alt="Accueil de l’institut Maison Valeria à Oran" fetchpriority="high">')
     ix = part('ix')
     video = ('<section class="mvv" id="video" aria-label="Vidéo de présentation"><div class="mvv-in"><span class="mvv-k">En images</span>'
              '<h2>Découvrez <em>Maison Valeria</em></h2><p class="mvv-sub">Cinq univers de soin et un diagnostic beauté offert, en quarante secondes.</p>'
@@ -241,10 +241,10 @@ def home():
     dx = dx.replace('<ol class="dsteps" id="dsteps"></ol>', '<ol class="dsteps" id="dsteps"></ol><a href="/diagnostic-beaute" class="more-l">En savoir plus sur le diagnostic ' + ARR + '</a>')
     bx2 = part('bx2').replace('href="#rendez-vous"', 'href="/rendez-vous"')
     gx = part('gx').replace('href="#rendez-vous"', 'href="/rendez-vous"').replace('src="img/', 'src="/img/')
-    nx = ('<section class="nx" id="institut"><div class="wrap"><div class="pics rv"><div class="a"><img src="/img/salon.webp" alt="Intérieur Maison Valeria" loading="lazy"></div>'
+    nx = ('<section class="nx" id="institut"><div class="wrap"><div class="pics rv"><div class="a"><img src="/img/accueil.webp" alt="Accueil de Maison Valeria" loading="lazy"></div>'
           '<div class="b"><img src="/img/devanture.webp" alt="Devanture Maison Valeria" loading="lazy"></div></div>'
           '<div class="rv"><span class="eyebrow">L’institut</span><h2 style="margin-top:14px">Bientôt <em>à Oran.</em></h2>'
-          '<p class="lead">Maison Valeria réunit sous un même toit la beauté du sourire, la coiffure, les soins du visage, les diagnostics technologiques et la beauté des mains.</p>'
+          '<p class="lead" style="margin-bottom:12px;color:var(--gold-d)">Résidence Hasnaoui, îlot 95, Oran</p><p class="lead">Maison Valeria réunit sous un même toit la beauté du sourire, la coiffure, les soins du visage, les diagnostics technologiques et la beauté des mains.</p>'
           '<div class="facts"><div class="fact"><b>5</b><span>univers de soins</span></div><div class="fact"><b>2</b><span>diagnostics offerts</span></div>'
           '<div class="fact"><b>4</b><span>techniques de lissage</span></div><div class="fact"><b>Oran</b><span>ouverture prochaine</span></div></div>'
           f'<a href="/institut" class="more-l">Visiter l’institut {ARR}</a></div></div></section>')
@@ -252,7 +252,7 @@ def home():
     ld = '<script type="application/ld+json">' + json.dumps({
         "@context": "https://schema.org", "@type": "BeautySalon", "name": "Maison Valeria", "description": "Institut de beauté à Oran : beauté du sourire, coiffure et lissages, soins du visage, diagnostics beauté offerts, mains et ongles.",
         "url": SITE + '/', "image": SITE + '/img/og.jpg', "logo": SITE + '/apple-touch-icon.png',
-        "address": {"@type": "PostalAddress", "addressLocality": "Oran", "addressCountry": "DZ"},
+        "address": {"@type": "PostalAddress", "streetAddress": "Résidence Hasnaoui, îlot 95", "addressLocality": "Oran", "addressCountry": "DZ"},
         "makesOffer": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": u['title']}} for u in UNI]}, ensure_ascii=False) + '</script>\n'
     body = hx + ix + video + ux + kx + dx + bx2 + gx + nx + rdv
     return page('index', 'Maison Valeria · Institut de beauté à Oran', 'Maison Valeria, institut de beauté à Oran : coiffure et lissages, soins du visage, beauté du sourire, mains et ongles. Diagnostic capillaire et visage offerts. Réservation en ligne.', body, '', extra_head=ld)
@@ -280,7 +280,7 @@ def univers_page(u):
                  '<h2 style="margin-top:14px">Le bon soin, <em>du premier coup.</em></h2>'
                  '<p class="lead">Choisir un soin ou un produit sans connaître l’état réel de sa peau ou de son cuir chevelu, c’est avancer à l’aveugle. Le diagnostic vous donne une lecture claire de vos besoins.</p>'
                  '<ul class="ticks"><li>Une analyse précise, par technologies avancées</li><li>Des recommandations de soins personnalisées</li><li>Des conseils produits adaptés, notamment Kérastase pour les cheveux</li><li>Offert à chaque cliente</li></ul></div>'
-                 '<div class="pic rv"><img src="' + U('1602549179763-ce6c9df961b7', 1000) + '" alt="Diagnostic capillaire" loading="lazy"></div></div></section>')
+                 '<div class="pic rv"><img src="/img/diagnostic-coin.webp" alt="Espace diagnostic X5 Pro de Maison Valeria" loading="lazy"></div></div></section>')
     else:
         intro, ticks = u['intro']
         tl = ''.join(f'<li>{t}</li>' for t in ticks)
@@ -318,7 +318,7 @@ def kerastase():
     body += ('<section class="sec"><div class="wrap split"><div class="rv"><span class="eyebrow">Notre choix</span><h2 style="margin-top:14px">Un rituel pour <em>chaque chevelure.</em></h2>'
              '<p class="lead">Parce que chaque chevelure est unique, votre diagnostic capillaire offert vous oriente vers le rituel Kérastase le plus adapté, en institut comme à la maison.</p>'
              '<ul class="ticks"><li>Soins profonds réalisés en institut</li><li>Rituel choisi d’après votre diagnostic capillaire</li><li>Conseils produits pour prolonger les résultats chez vous</li></ul></div>'
-             '<div class="pic rv"><img src="/img/salon.webp" alt="Corner Kérastase de Maison Valeria" loading="lazy"></div></div></section>')
+             '<div class="pic rv"><img src="/img/accueil.webp" alt="Accueil et corner Kérastase de Maison Valeria" loading="lazy"></div></div></section>')
     cards = ''.join(f'<article class="rt rv"><i style="background:{c}"></i><small>{s}</small><h3>{n}</h3><p>{d}</p></article>' for n, s, c, d in RIT)
     body += ('<section class="sec alt"><div class="wrap"><div class="sec-head rv"><div><span class="eyebrow">Les gammes</span><h2 style="margin-top:14px">Six rituels, <em>six besoins.</em></h2></div>'
              '<p class="lead">Les gammes Kérastase proposées à l’institut, pour répondre à chaque nature et à chaque état de cheveux.</p></div>'
@@ -333,7 +333,7 @@ def kerastase():
 PRIX = {}
 
 def tarifs():
-    body = ph(U('1731514771613-991a02407132', 1920), 'Tarifs', 'Nos <em>tarifs.</em>', 'L’ensemble des prestations de Maison Valeria. Les diagnostics beauté sont offerts à chaque cliente.', ['Tarifs'],
+    body = ph('/img/coiffure.webp', 'Tarifs', 'Nos <em>tarifs.</em>', 'L’ensemble des prestations de Maison Valeria. Les diagnostics beauté sont offerts à chaque cliente.', ['Tarifs'],
               f'<a href="/rendez-vous" class="btn bw">Prendre rendez-vous {ARR}</a>', short=True)
     cards = ''
     for u in UNI:
@@ -353,14 +353,14 @@ def tarifs():
 
 # ---------------------------------------------------------------- L'institut
 def institut():
-    body = ph('/img/salon-top.webp', 'L’institut', 'Maison <em>Valeria.</em>', 'Un institut dédié à la beauté, au bien-être et aux soins personnalisés, qui ouvre bientôt ses portes à Oran.', ['L’institut'],
+    body = ph('/img/accueil.webp', 'L’institut', 'Maison <em>Valeria.</em>', 'Un institut dédié à la beauté, au bien-être et aux soins personnalisés, qui ouvre bientôt ses portes à Oran.', ['L’institut'],
               f'<a href="/rendez-vous" class="btn bw">Prendre rendez-vous {ARR}</a>')
     body += ('<section class="sec"><div class="wrap split"><div class="rv"><span class="eyebrow">Notre vision</span><h2 style="margin-top:14px">Comprise avant <em>d’être soignée.</em></h2>'
              '<p class="lead">Maison Valeria réunit sous un même toit la beauté du sourire, la coiffure, les soins du visage, les diagnostics par technologies avancées et la beauté des mains.</p>'
              '<p>Notre particularité : chaque cliente peut comprendre ses besoins avant de choisir une prestation ou un produit, grâce à un diagnostic capillaire et un diagnostic du visage offerts.</p>'
              '<div class="facts"><div class="fact"><b>5</b><span>univers de soins</span></div><div class="fact"><b>2</b><span>diagnostics offerts</span></div>'
              '<div class="fact"><b>4</b><span>techniques de lissage</span></div><div class="fact"><b>Oran</b><span>ouverture prochaine</span></div></div></div>'
-             '<div class="pic rv"><img src="/img/interieur.webp" alt="Entrée de l’institut Maison Valeria" loading="lazy"></div></div></section>')
+             '<div class="pic rv"><img src="/img/coiffure.webp" alt="Espace coiffure de Maison Valeria" loading="lazy"></div></div></section>')
     body += ('<section class="sec alt"><div class="wrap"><div class="sec-head rv"><div><span class="eyebrow">Nos engagements</span><h2 style="margin-top:14px">Trois <em>promesses.</em></h2></div></div>'
              '<div class="vals"><div class="rv"><b>i.</b><h3>L’excellence des prestations</h3><p>Des gestes précis et des protocoles adaptés à chaque cliente, du diagnostic jusqu’aux finitions.</p></div>'
              '<div class="rv"><b>ii.</b><h3>Des technologies modernes</h3><p>Caméra haute définition et X5 Pro Skin Detector pour analyser cuir chevelu et peau avant chaque soin.</p></div>'
@@ -372,8 +372,8 @@ def institut():
              '<div class="mvv-ctl"><button type="button" class="mvv-pp" aria-label="Lecture"></button><button type="button" class="mvv-rs" aria-label="Revoir depuis le début"><svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z"/></svg></button></div>'
              '<div class="mvv-bar"><i></i></div></div><a class="mvv-cta" href="/rendez-vous">Prendre rendez-vous</a></div></section>')
     body += video
-    gal = [('salon.webp', 'L’espace soins', 'h2'), ('s1.webp', 'La devanture', 'w2'), ('kerastase.webp', 'Le corner Kérastase', ''), ('interieur.webp', 'L’entrée', ''),
-           ('salon-top.webp', 'La mezzanine', 'w2'), ('enseigne.webp', 'L’enseigne', 'w2')]
+    gal = [('accueil.webp', 'L’accueil', 'w2 h2'), ('diagnostic-coin.webp', 'L’espace diagnostic', 'h2'), ('cabine.webp', 'La cabine sourire', ''),
+           ('espace-ongles.webp', 'L’espace ongles', ''), ('coiffure.webp', 'L’espace coiffure', 'w2'), ('kerastase.webp', 'Le corner Kérastase', 'w2')]
     figs = ''.join(f'<figure class="{c} rv"><img src="/img/{f}" alt="{t}, Maison Valeria" loading="lazy"><figcaption>{t}</figcaption></figure>' for f, t, c in gal)
     body += (f'<section class="sec"><div class="wrap"><div class="sec-head rv"><div><span class="eyebrow">Les lieux</span><h2 style="margin-top:14px">Un cadre <em>d’exception.</em></h2></div>'
              f'<p class="lead">Un aperçu de l’institut, avant de vous y accueillir.</p></div><div class="igal">{figs}</div></div></section>')
@@ -382,12 +382,14 @@ def institut():
 
 # ---------------------------------------------------------------- Rendez-vous
 def rendezvous():
-    body = ph('/img/salon.webp', 'Rendez-vous en ligne', 'Réservez <em>votre moment.</em>', 'Choisissez votre soin, votre créneau, et ajoutez si vous le souhaitez un diagnostic beauté offert.', ['Rendez-vous'], short=True)
+    body = ph('/img/accueil.webp', 'Rendez-vous en ligne', 'Réservez <em>votre moment.</em>', 'Choisissez votre soin, votre créneau, et ajoutez si vous le souhaitez un diagnostic beauté offert.', ['Rendez-vous'], short=True)
     body += booking_section(False)
     body += diag_band()
     return page('rendez-vous', 'Prendre rendez-vous · Maison Valeria, Oran', 'Réservez en ligne votre prestation chez Maison Valeria à Oran : coiffure, lissages, soins du visage, sourire, ongles. Diagnostic beauté offert.', body, '')
 
 # ---------------------------------------------------------------- Contact
+MAPS = 'https://www.google.com/maps/search/?api=1&query=R%C3%A9sidence+Hasnaoui+%C3%AElot+95+Oran'
+
 IC = {
     'pin': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
     'tel': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>',
@@ -396,16 +398,16 @@ IC = {
 }
 
 def contact():
-    body = ph('/img/devanture.webp', 'Contact', 'Venir à <em>l’institut.</em>', 'Maison Valeria ouvre prochainement ses portes à Oran. Retrouvez ici nos coordonnées dès leur publication.', ['Contact'],
+    body = ph('/img/devanture.webp', 'Contact', 'Venir à <em>l’institut.</em>', 'Maison Valeria vous accueille prochainement Résidence Hasnaoui, îlot 95, à Oran.', ['Contact'],
               f'<a href="/rendez-vous" class="btn bw">Prendre rendez-vous {ARR}</a>', short=True)
     body += ('<section class="sec"><div class="wrap"><div class="cgrid">'
-             f'<div class="cc rv">{IC["pin"]}<h3>Adresse</h3><p>Oran, Algérie</p><span class="soon">Adresse exacte communiquée prochainement</span></div>'
+             f'<div class="cc rv">{IC["pin"]}<h3>Adresse</h3><p>Résidence Hasnaoui, îlot 95<br>Oran, Algérie</p><a class="v" style="font-size:18px" href="' + MAPS + '" target="_blank" rel="noopener">Itinéraire →</a></div>'
              f'<div class="cc rv">{IC["tel"]}<h3>Téléphone</h3><p>Fixe et mobile de l’institut</p><span class="soon">Numéros communiqués prochainement</span></div>'
              f'<div class="cc rv">{IC["clock"]}<h3>Horaires</h3><p>Accueil sur rendez-vous</p><span class="soon">Horaires définitifs à l’ouverture</span></div>'
              f'<div class="cc rv">{IC["cal"]}<h3>Rendez-vous</h3><p>Réservez votre soin en ligne, en moins d’une minute.</p><a class="v" href="/rendez-vous">Réserver en ligne →</a></div>'
              '</div>'
              '<div class="mapph rv"><img src="/img/s1.webp" alt="Devanture de Maison Valeria à Oran" loading="lazy"><div><span class="eyebrow" style="color:#ebd3ae">Plan d’accès</span>'
-             '<h3 style="margin-top:12px">Bientôt <em style="color:#ebd3ae">à Oran.</em></h3><p>Le plan d’accès sera ajouté dès la publication de l’adresse.</p></div></div>'
+             '<h3 style="margin-top:12px">Résidence Hasnaoui, <em style="color:#ebd3ae">îlot 95.</em></h3><p>Oran, Algérie</p><a href="' + MAPS + '" target="_blank" rel="noopener" class="btn bw" style="margin-top:22px;background:#fff;color:var(--espresso)">Ouvrir dans Google Maps ' + ARR + '</a></div></div>'
              '</div></section>')
     body += diag_band() + cta()
     return page('contact', 'Contact · Maison Valeria, institut de beauté à Oran', 'Contactez Maison Valeria, institut de beauté à Oran : adresse, téléphone, horaires et prise de rendez-vous en ligne.', body, 'contact')
