@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/kfqhnbks/maisonvaleria.net/
+    - export DEPLOYPATH=/home/kfqhnbks/public_html/
     - /bin/mkdir -p $DEPLOYPATH
     - /bin/cp -f *.html *.png *.svg robots.txt sitemap.xml .htaccess $DEPLOYPATH
     - /bin/cp -Rf assets fonts img video $DEPLOYPATH
