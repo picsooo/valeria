@@ -1,4 +1,5 @@
 Options -Indexes
+DirectoryIndex disabled
 DirectoryIndex index.html
 RewriteEngine On
 
@@ -10,7 +11,8 @@ RewriteRule ^(.*)$ https://maisonvaleria.net/$1 [R=301,L]
 # Anciennes adresses
 RewriteRule ^signature/?$ / [R=301,L]
 RewriteRule ^signature-rdv/?$ /rendez-vous [R=301,L]
-RewriteRule ^index(\.html)?$ / [R=301,L]
+RewriteCond %{THE_REQUEST} \s/index(\.html)?[\s?] [NC]
+RewriteRule ^ / [R=301,L]
 
 # /page.html -> /page
 RewriteCond %{THE_REQUEST} \s/([^.\s?]+)\.html[\s?] [NC]
