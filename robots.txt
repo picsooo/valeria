@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://valeria-eta.vercel.app/sitemap.xml
+Sitemap: https://maisonvaleria.net/sitemap.xml

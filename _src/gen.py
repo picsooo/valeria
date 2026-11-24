@@ -4,7 +4,7 @@ import os, re, json, shutil, html as H
 
 SRC = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(SRC, 'dist')
-SITE = 'https://valeria-eta.vercel.app'   # à remplacer par le domaine définitif
+SITE = 'https://maisonvaleria.net'   # à remplacer par le domaine définitif
 
 def U(i, w=1400):
     return f'https://images.unsplash.com/photo-{i}?auto=format&fit=crop&q=74&w={w}'
@@ -127,7 +127,7 @@ def footer():
             f'<div><h5>Maison Valeria</h5><ul><li><a href="/institut">L’institut</a></li><li><a href="/tarifs">Tarifs</a></li><li><a href="/rendez-vous">Prendre rendez-vous</a></li><li><a href="/contact">Contact</a></li></ul></div>'
             f'<div><h5>Nous trouver</h5><ul><li>Résidence Hasnaoui, îlot 95<br>Oran, Algérie</li><li style="font-size:12.5px">Horaires et téléphone communiqués prochainement</li><li style="color:var(--gold-l)">Diagnostics beauté offerts</li></ul></div>'
             f'<div class="copy"><span>© <span id="yr">2026</span> Maison Valeria</span><span>Institut de beauté · Oran</span>'
-            f'<span class="mv-credit">Site web réalisé par <a href="https://webminds.dz" target="_blank" rel="noopener">Webminds</a></span></div>'
+            f'<span class="mv-credit">Site web réalisé par Webminds · <a href="https://www.webminds.dz" target="_blank" rel="noopener">www.webminds.dz</a></span></div>'
             f'</div></footer><a class="btn btn-gold fab" href="/rendez-vous">Réserver</a>')
 
 def page(path, title, desc, body, cur='', og='/img/og.jpg', extra_head='', bodycls='lx'):
